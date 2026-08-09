@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #F7F9FC;
+  --surface: #FFFFFF;
+  --text: #1A1F2E;
+  --text-secondary: #6B7280;
+  --primary: #2672F2;
+  --success: #21B873;
+  --border: #E5E7EB;
+}
+
+.dark {
+  --bg: #12161F;
+  --surface: #1E2536;
+  --text: #F3F4F6;
+  --text-secondary: #9CA3AF;
+  --primary: #3B82F6;
+  --success: #34D399;
+  --border: #374151;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+}
+
+/* RTL support for Persian */
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Smooth transitions */
+* {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
